@@ -27,11 +27,11 @@ axiosInstance.interceptors.request.use(
 
 axiosInstance.interceptors.response.use(
     function(response) {
-        // Stop global loader here
+       
         return processResponse(response);
     },
     function(error) {
-        // Stop global loader here
+        
         return Promise.reject(ProcessError(error));
     }
 )
